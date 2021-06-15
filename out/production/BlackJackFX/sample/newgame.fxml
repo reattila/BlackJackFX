@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#Exit" text="Quit" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <ImageView fitHeight="600.0" fitWidth="1176.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@board.png" />
+               </image>
+            </ImageView>
+            <BorderPane prefHeight="568.0" prefWidth="800.0">
+               <top>
+              <Label alignment="CENTER" prefHeight="69.0" prefWidth="298.0" style="-fx-font-size: 60;" text="BlackJack" textAlignment="CENTER" textFill="#2f2f28" wrapText="false" BorderPane.alignment="CENTER">
+                <font>
+                  <Font size="18.0" />
+                </font>
+                     <BorderPane.margin>
+                        <Insets top="50.0" />
+                     </BorderPane.margin>
+              </Label>
+               </top>
+               <center>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="gamebutton" mnemonicParsing="false" onAction="#NewGame" prefHeight="67.0" prefWidth="323.0" style="-fx-font-size: 35;" text="New Game">
+                           <VBox.margin>
+                              <Insets top="-50.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#Load" prefHeight="67.0" prefWidth="323.0" style="-fx-font-size: 35;" text="Load">
+                           <VBox.margin>
+                              <Insets top="40.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#Exit" prefHeight="67.0" prefWidth="323.0" style="-fx-font-size: 35;" text="Exit">
+                           <VBox.margin>
+                              <Insets top="40.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </VBox>
+               </center>
+            </BorderPane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

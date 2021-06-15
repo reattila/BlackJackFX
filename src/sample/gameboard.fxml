@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+                  <MenuItem mnemonicParsing="false" onAction="#NewGameB" text="NewGame" />
+            <MenuItem mnemonicParsing="false" onAction="#LoadB" text="Load" />
+                  <MenuItem mnemonicParsing="false" onAction="#SaveB" text="Save" />
+            <MenuItem mnemonicParsing="false" onAction="#Exit" text="Quit" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="562.0" prefWidth="798.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@board.png" />
+               </image>
+            </ImageView>
+            <VBox alignment="TOP_CENTER" layoutX="71.0" layoutY="150.0" prefHeight="323.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="botnumber" style="-fx-font-size: 25;" textFill="#93a80c">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="playnumber" style="-fx-font-size: 25;" textFill="#93a80c">
+                     <VBox.margin>
+                        <Insets top="140.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <HBox layoutX="171.0" layoutY="150.0" prefHeight="150.0" prefWidth="562.0">
+               <children>
+                  <ImageView fx:id="botcard1" fitHeight="150.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="botcard2" fitHeight="150.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="botcard3" fitHeight="150.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="botcard4" fitHeight="150.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="botcard5" fitHeight="150.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+            <HBox layoutX="171.0" layoutY="323.0" prefHeight="150.0" prefWidth="562.0">
+               <children>
+                  <ImageView fx:id="playcard1" fitHeight="150.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="playcard2" fitHeight="150.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="playcard3" fitHeight="150.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="playcard4" fitHeight="150.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="playcard5" fitHeight="150.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+            <HBox fx:id="contlay" alignment="CENTER" layoutY="521.0" prefHeight="54.0" prefWidth="800.0" spacing="50.0" visible="false">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="54.0" prefWidth="155.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="-270.0" right="40.0" />
+                     </HBox.margin>
+                     <children>
+                        <TextField fx:id="betnum" prefHeight="31.0" prefWidth="90.0">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin></TextField>
+                        <Button fx:id="bet" mnemonicParsing="false" onAction="#TakeBet" text="Bet" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="hit" mnemonicParsing="false" onAction="#Hit" text="Hit" />
+                  <Button fx:id="stay" mnemonicParsing="false" onAction="#Stay" text="Stay" />
+                  <Button fx:id="doublehit" mnemonicParsing="false" onAction="#DoubleHit" text="Double" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="142.0">
+               <children>
+                  <Label fx:id="cash" alignment="CENTER" prefHeight="48.0" prefWidth="86.0" style="-fx-font-size: 30;" textFill="#93a80c" />
+               </children>
+            </HBox>
+            <HBox fx:id="startlay" alignment="CENTER" layoutX="261.0" layoutY="423.0" prefHeight="100.0" prefWidth="276.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#GetStart" prefHeight="25.0" prefWidth="84.0" text="Start" />
+               </children>
+            </HBox>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
